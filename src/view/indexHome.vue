@@ -19,12 +19,13 @@
 				      goBack() {						
 				        console.log(proxy.$jsbridge);
 						alert(window.address_a);
-						// if(window.WebViewJavascriptBridge){
-						// 	alert(window.WebViewJavascriptBridge);
+						if(window.WebViewJavascriptBridge||window.WVJBCallbacks){
+							alert(window.WebViewJavascriptBridge);
+							alert(window.WVJBCallbacks);
 							proxy.$jsbridge.back();
-						// }else{
-						// 	alert('无window.WebViewJavascriptBridge');
-						// }
+						}else{
+							alert('无window.WebViewJavascriptBridge');
+						}
 				      },
 				    };
 				    return {
