@@ -18,6 +18,7 @@
 				 const methods = {
 				      goBack() {						
 				        console.log(proxy.$jsbridge);
+						alert(window.address_a);
 						if(window.WebViewJavascriptBridge){
 							alert(window.WebViewJavascriptBridge);
 							proxy.$jsbridge.back();
