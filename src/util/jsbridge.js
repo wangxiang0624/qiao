@@ -19,6 +19,7 @@ const isIPhoneXR = /iphone/gi.test(window.navigator.userAgent) &&
     window.screen.width === 414 &&
     window.screen.height === 896;// isIPhoneXR
 if (isiOS) {
+	alert('ios');
     //ios桥必须的函数
     window.setupWebViewJavascriptBridge = function setupWebViewJavascriptBridge(callback) {
         if (window.WebViewJavascriptBridge) {
@@ -37,6 +38,7 @@ if (isiOS) {
         }, 0);
     };
 } else if (isAndroid) {
+	alert('isAndroid');
     window.setupWebViewJavascriptBridge = function setupWebViewJavascriptBridge(callback) {
         if (window.WebViewJavascriptBridge) {
             callback(window.WebViewJavascriptBridge);
