@@ -19,11 +19,9 @@
 			          goBack() {      
 			            console.log(proxy.$jsbridge);
 			      // alert(window.address_a);
-			      proxy.$jsbridge.getEnvInfo((data)=>{
-			       console.log("getEnvInfo=",data);
-			      })
-			      if(proxy.$jsbridge.isiOS || window.WebViewJavascriptBridge||window.WVJBCallbacks){
-			       alert(window.WebViewJavascriptBridge);
+			     
+			      if(window.WebViewJavascriptBridge||window.isAppEnv){
+			       alert(window.isAppEnv);
 			       alert(window.WVJBCallbacks);
 			       proxy.$jsbridge.back();
 			      }else{
